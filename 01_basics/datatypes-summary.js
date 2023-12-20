@@ -32,7 +32,32 @@ const myFunction = function(){
     console.log("hello world");
 }
 
-console.log(typeof myFunction); // object function 
-console.log(typeof id); // symbol
+// console.log(typeof myFunction); // object function 
+// console.log(typeof id); // symbol
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap(non-Primitive)
+
+let myYoutubeName = "shilpeshThakur"
+
+let anotherName = myYoutubeName
+anotherName = "newchannel"
+// console.log(myYoutubeName);
+// console.log(anotherName);
+
+
+let userOne = {
+    email : "user@google.com",
+    upi: "upi@ybl"
+}
+
+let userTwo = userOne // value by reference
+
+userTwo.email = "s@s.com" // it will change value in heap memory
+
+console.log(userOne.email);
+
