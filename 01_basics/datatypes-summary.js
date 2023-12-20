@@ -11,14 +11,28 @@ const isLoggedIn = false
 const outsideTemp = null
 let userEmail; //undefined
 
-const id = symbol('123')
-const anotheId = symbol('123')
+const id = Symbol('123')
+const anotheId = Symbol('123')
 
-console.log(id === anotheId);
+// console.log(id === anotheId);
 
-const bigNumber = 34554555455544
+const bigNumber = 34554555455544n
 
 // reference (non primitive)
 
 // Array, Objects, Functions
 
+const heros = ["shaktiman", "naagraj", "doga"]
+let myObj = {
+    name : "shilpesh",
+    age : 27
+}
+
+const myFunction = function(){
+    console.log("hello world");
+}
+
+console.log(typeof myFunction); // object function 
+console.log(typeof id); // symbol
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
