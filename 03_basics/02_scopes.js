@@ -38,7 +38,7 @@ if(true){
 
 
 
-// ****************************** interestinf ***************************
+// ****************************** interesting ***************************
 
 console.log(addone(5)); // we can access
 function addone(num){
