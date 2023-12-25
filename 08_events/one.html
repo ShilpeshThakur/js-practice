@@ -31,21 +31,31 @@
     //ClientX,ClientY, screenX, ScreenY
     // altkey, ctrlkey, shiftkey, keycode
     
-    document.getElementById('images').addEventListener('click',function(e){
-        console.log("clicked inside the ul");
-    },false) // default false
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false) // default false
     // event propagation (event bubbling and event capturring)
 
-    document.getElementById('owl').addEventListener('click',function(e){
-        console.log("owl clicked");
-        e.stopPropagation()
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("google clicked");
+    // },false)
+    
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
     },false)
 
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        console.log("google clicked");
-    },false)
-    
 </script>
 </html>
