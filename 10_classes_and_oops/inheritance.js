@@ -16,11 +16,19 @@ class Teacher extends User{
     }
 
     addCourse(){
-        console.log(`A new Course wa added by ${this.username}`)
+        console.log(`A new Course was added by ${this.username}`)
     }
 }
 
 const chai = new Teacher("chai")
-
 chai.addCourse()
+chai.logMe()
 
+const masalachai = new User("masalaChai")
+masalachai.logMe()
+
+console.log(chai === masalachai); // false
+
+console.log(chai instanceof Teacher); //true
+
+console.log(chai instanceof User); //true
