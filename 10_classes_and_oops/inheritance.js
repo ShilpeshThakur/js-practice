@@ -14,5 +14,13 @@ class Teacher extends User{
         this.email = email
         this.password = password
     }
+
+    addCourse(){
+        console.log(`A new Course wa added by ${this.username}`)
+    }
 }
+
+const chai = new Teacher("chai")
+
+chai.addCourse()
 
